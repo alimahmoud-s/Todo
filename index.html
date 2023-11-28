@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDO List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-warning bg-opacity-25">
+    <div id="particles-js" class="position-fixed z-n1  w-100  h-100 top-0 start-0 "></div>
+    <header class="py-5 ">
+        <nav class="container border-bottom py-md-3 ">
+            <h1 class="text-dark-emphasis fw-bolder fs-1">ToDo List</h1>
+        </nav>
+    </header>
+    <section id="main section" class="container">
+        <h2 class="text-center py-3">Write What You'll do</h2>
+        <form class="py-md-4 w-75 m-auto form-control  bg-dark bg-opacity-10 border-black">
+            <label for="bookName">To Do </label>
+            <input id="bookName" class="form-control mb-2 border-black bg-transparent " type="text" placeholder="Write your book name here ">
+            <div id="warning" class="bg-danger bg-opacity-50 rounded-1"> </div>
+            <label for="bookSiteLink" class="mt-4">Date</label>
+            <input id="bookSiteLink" class="form-control border-black bg-transparent" type="date" >
+            <div id="warninglink" class="bg-danger  bg-opacity-50">
+            </div>
+            <div class=" text-center pt-3 "><button type="button" id="submitButton" onclick="getbookInfo(booksArr)"
+                    class="btn shadow btn-primary ">Submit</button>
+            </div>
+        </form>
+    </section>
+    <section class="pt-4 ">
+        <table id="hideTable" class=" bg-info container rounded bg-opacity-10 mt-3 d-none">
+            <thead class="">
+                <tr class="bg-primary bg-opacity-10">
+                    <th class="fs-2 lead text-center">ToDo Name</th>
+                    <th class="fs- lead text-center">Date</th><th class="fs- lead text-center">Status</th>
+                    <th class="fs- lead text-center ">action</th>
+                </tr>
+            </thead>
+            <tbody id="displayTable">
+            </tbody>
+        </table>
+    </section>
+    <footer class="py">
+        <div class="container border-top pt-3 ">
+            <p>© 2019 ToDo Inc.</p>
+        </div>
+    </footer>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
